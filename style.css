@@ -1,0 +1,124 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.card-container {
+    min-height: 100vh;
+    
+    display: flex;
+    background: linear-gradient(
+        135deg, #0f172a, #1e3a5f
+    );
+    /* add linear -grident */
+    padding: 10px;
+    font-family: 'Courier New', Courier, monospace;
+    justify-content: center;
+    align-items: center;
+}
+
+.id-card {
+    /* padding: 20px; */
+    width: 450px;
+    background-color: #ffffff;
+    border: 1px solid black;
+    border-radius: 18px;
+    box-shadow: 0 12px 30px rgb(0,0,0,0.45);
+    position: relative;
+
+}
+/* 
+header {
+    /* display: block; */
+    /* justify-content: center; */
+    /* margin: 20px; */
+
+*/
+
+.card-header {
+    background: linear-gradient(180deg, #08284a, #0a3a65);
+    padding: 28px 0 100px;
+    text-align: center;
+    margin: 30px;
+     justify-content: center;
+    align-items: center;
+    width: 100%; 
+
+
+}
+.logo{
+    /* padding-bottom: 13px; */
+    opacity: 1.8;
+    border-radius: 50%;
+    width: 16%;
+}
+#college-name{
+    width: 80%;
+    max-height: 75px;
+    object-fit: contain;
+    overflow: hidden;
+    margin-top: 5px;
+    padding-bottom: 8px;
+    position: absolute;
+}
+#pp{
+    width: 140px;
+    height: 125px;
+    top: 115px;
+        left: 60%;
+        transform: translateX(100%);
+        border-radius: 50%;
+        background: white;
+        display: flex;
+        justify-content: center;
+        align-items: center;    
+        border: 5px solid rgb(109, 102, 102);
+        box-shadow: 0 6px 18px rgba(0, 0, 0, 0.28);
+        z-index: 2;
+    
+}
+#card-body{
+    width: 100%;
+    overflow: hidden;
+    /* height: 200px; */
+    /* padding: 20px 24px 20px; */
+    text-align: center;
+     margin-bottom: 20px; 
+}
+.details{
+    padding: 15px;
+}
+
+.id-line{
+    margin: 14px auto ;
+    display: inline-block;
+    background: #07294b;
+    color: #fff;
+    padding: 8px 14px;
+    border-radius: 10px;
+    font-weight: 700;
+}
+id-label{
+    margin-right: 6px;
+    opacity: 0.9;
+    font-weight: 600;
+}
+.barcode{
+    margin: 18px auto 8px;
+    width: 60%;
+    height: 32px;
+    background-image: repeating-linear-gradient(90deg, #0b2742 0 4px, #fff 4px 8px);
+
+}
+
+.card-footer{
+    background: #f9fafb;
+    padding: 10px 18px;
+    text-align: center;
+    border-top: 1px solid #e6e9ee;
+}
+.footer-text{
+    color: #64748b;
+    font-size: 12px;
+}
