@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Task Manager</title>
+
+    <link rel="stylesheet" href="task.css">
+</head>
+
+<body>
+
+    <!-- ======= HEADER =========-->
+
+    <header class="header">
+
+        <div class="header-content">
+
+            <div>
+                <p class="eyebrow">JAVASCRIPT CAPSTONE</p>
+
+                <h1>Task Manager</h1>
+
+                <p class="subtitle">
+                    Organize your work, track progress and stay productive.
+                </p>
+            </div>
+
+            <div class="header-badge">
+                <span class="status-dot"></span>
+                <span>Task System Active</span>
+            </div>
+
+        </div>
+
+    </header>
+
+ <!--  MAIN CONTAINER  -->
+    <main class="container">
+<!-- STATICS -->
+        <section class="stats-section">
+
+            <div class="stat-card">
+                <span class="stat-label">Total Tasks</span>
+                <strong id="totalTasks">0</strong>
+            </div>
+
+            <div class="stat-card">
+                <span class="stat-label">Completed</span>
+                <strong id="completedTasks">0</strong>
+            </div>
+
+            <div class="stat-card">
+                <span class="stat-label">Pending</span>
+                <strong id="pendingTasks">0</strong>
+            </div>
+
+        </section>
+<!-- ADD TASK PANNEL -->
+
+        <section class="panel add-panel">
+
+            <div class="section-heading">
+
+                <div>
+                    <p class="section-kicker">CREATE</p>
+                    <h2>Add New Task</h2>
+                </div>
+
+                <span class="task-number">01</span>
+
+            </div>
+
+
+            <form id="taskForm">
+
+                <div class="form-grid">
+
+                    <div class="input-group">
+
+                        <label for="taskTitle">
+                            Task Title
+                        </label>
+
+                        <input type="text" id="taskTitle" placeholder="e.g. Complete JavaScript assignment" required>
+
+                    </div>
+
+
+                    <div class="input-group">
+
+                        <label for="taskPriority">
+                            Priority
+                        </label>
+
+                        <select id="taskPriority">
+
+                            <option value="high">
+                                High
+                            </option>
+
+                            <option value="medium" selected>
+                                Medium
+                            </option>
+
+                            <option value="low">
+                                Low
+                            </option>
+
+                        </select>
+
+                    </div>
+
+                </div>
+
+
+                <button type="submit" class="primary-btn">
+                    + Add Task
+                </button>
+
+            </form>
+
+        </section>
+<!-- ADD TASK PANNEL  -->
+        <section class="panel">
+
+            <div class="section-heading">
+
+                <div>
+                    <p class="section-kicker">MANAGE</p>
+                    <h2>Task Controls</h2>
+                </div>
+
+                <span class="task-number">02</span>
+
+            </div>
+
+
+            <div class="controls-grid">
+
+                <button class="control-btn active" data-filter="all">
+                    All Tasks
+                </button>
+
+                <button class="control-btn" data-filter="pending">
+                    Pending
+                </button>
+
+                <button class="control-btn" data-filter="completed">
+                    Completed
+                </button>
+
+                <button class="control-btn" data-sort="priority">
+                    Sort by Priority
+                </button>
+
+            </div>
+
+
+            <!-- Search -->
+
+            <div class="search-box">
+
+                <input type="text" id="searchInput" placeholder="Search tasks...">
+
+                <button id="searchBtn" class="secondary-btn">
+                    Search
+                </button>
+
+                <button id="clearSearch" class="ghost-btn">
+                    Clear
+                </button>
+
+            </div>
+
+        </section>
+<!-- TASK LISTS  -->
+        <section class="panel task-panel">
+
+            <div class="section-heading">
+
+                <div>
+                    <p class="section-kicker">TASKS</p>
+                    <h2>Your Tasks</h2>
+                </div>
+
+                <span id="taskCountLabel">
+                    0 tasks
+                </span>
+
+            </div>
+            <div id="taskList" class="task-list">
+
+                <div class="empty-state">
+
+                    <div class="empty-icon">
+                        ✓
+                    </div>
+
+                    <h3>No tasks available</h3>
+
+                    <p>
+                        Add your first task to get started.
+                    </p>
+                </div>
+            </div>
+        </section>
+    </main>
+    <!-- TOAST -->
+    <div id="toast" class="toast"></div>
+<!-- FOOTER  -->
+    <footer>
+
+        <p>
+            JavaScript Task Manager • 2026
+        </p>
+
+        <span>
+            Built with HTML • CSS • JavaScript
+        </span>
+
+    </footer>
+
+
+    <script src="task-manager.js"></script>
+
+</body>
+
+</html>
